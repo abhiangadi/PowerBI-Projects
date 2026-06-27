@@ -1,0 +1,5 @@
+SUM()
+AVG()
+MIN()
+MAX()
+COUNT()
