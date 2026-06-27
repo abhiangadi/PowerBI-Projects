@@ -1,15 +1,19 @@
--- View all orders
+-- View all Orders
 SELECT * FROM orders;
 
--- View all pizzas
+-- View all Pizzas
 SELECT * FROM pizzas;
 
--- View pizza types
+-- View all Pizza Types
 SELECT * FROM pizza_types;
 
--- View order details
+-- View Order Details
 SELECT * FROM order_details;
 
 -- Total Orders
-SELECT COUNT(*) AS Total_Orders
+SELECT COUNT(*) AS TotalOrders
 FROM orders;
+
+-- Total Pizza Types
+SELECT COUNT(*) AS PizzaTypes
+FROM pizza_types;
