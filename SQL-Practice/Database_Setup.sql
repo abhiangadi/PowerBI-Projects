@@ -1,5 +1,5 @@
 -- Create Database
 CREATE DATABASE pizzahut;
 
--- Use Database
+-- Select Database
 USE pizzahut;
