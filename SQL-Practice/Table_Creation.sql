@@ -1,22 +1,26 @@
-CREATE TABLE Student (
-    Rollno INT PRIMARY KEY,
-    Name VARCHAR(50),
-    Marks INT NOT NULL,
-    Grade VARCHAR(1),
-    City VARCHAR(20)
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    date DATE,
+    time TIME
 );
 
-
-CREATE TABLE Dept (
-  id int primary key,
-  name varchar(50)
+CREATE TABLE order_details (
+    order_details_id INT PRIMARY KEY,
+    order_id INT,
+    pizza_id VARCHAR(50),
+    quantity INT
 );
 
-CREATE TABLE Teachers (
-id int primary key,
-name varchar(50),
-Dept_id int,
-Foreign key (Dept_id) references Dept(id)
-On Update cascade
-On Delete cascade
+CREATE TABLE pizzas (
+    pizza_id VARCHAR(50) PRIMARY KEY,
+    pizza_type_id VARCHAR(50),
+    size VARCHAR(5),
+    price DECIMAL(5,2)
+);
+
+CREATE TABLE pizza_types (
+    pizza_type_id VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(100),
+    category VARCHAR(50),
+    ingredients TEXT
 );
